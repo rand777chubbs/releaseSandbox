@@ -1,8 +1,4 @@
 <!doctype html>
-<div class="bg-green-900 text-white text-center px-4 py-3 text-lg font-bold shadow-md" id="promo-banner">
-  🎉 New Clients: <span class="underline">25% OFF</span> your first session with code 
-  <span class="bg-white text-green-900 px-2 py-1 rounded">RISE25</span> — Limited Time!
-</div>
 <html lang="en">
 <head>
   <meta charset="utf-8">
@@ -28,76 +24,88 @@
     gtag('config', 'G-6E27FHTPSH');
   </script>
 
-  <!-- Meta Pixel Code -->
+  <!-- Meta Pixel Code (replace ID) -->
   <script>
     !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
       n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
       n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
       t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}
     (window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
-
-    (function(){
-      var PIXEL_ID = 'REPLACE_WITH_PIXEL_ID';
-      try {
-        var qp = new URLSearchParams(location.search).get('fbp');
-        var meta = document.querySelector('meta[name="facebook-pixel-id"]');
-        var win = (typeof window !== 'undefined') ? window.FB_PIXEL_ID : null;
-        var id = qp || (meta && meta.content) || win || PIXEL_ID;
-        if (id && id !== 'REPLACE_WITH_PIXEL_ID') { fbq('init', id); }
-        else { console.warn('Meta Pixel ID is not set.'); }
-      } catch (e) { console.warn('Pixel init error:', e); }
-      fbq('track', 'PageView');
-    })();
+    fbq('init', 'REPLACE_WITH_PIXEL_ID');
+    fbq('track', 'PageView');
   </script>
   <!-- End Meta Pixel Code -->
 </head>
 <body class="min-h-screen text-gray-800">
 
-  <!-- Meta Pixel NoScript -->
   <noscript>
     <img height="1" width="1" style="display:none"
          src="https://www.facebook.com/tr?id=REPLACE_WITH_PIXEL_ID&ev=PageView&noscript=1"/>
   </noscript>
-  <!-- End Meta Pixel NoScript -->
+
+  <!-- Promo banner -->
+  <div class="bg-green-900 text-white text-center px-4 py-3 text-lg font-bold shadow-md" id="promo-banner">
+    🎉 New Clients: <span class="underline">25% OFF</span> your first session with code 
+    <span class="bg-white text-green-900 px-2 py-1 rounded">RISE25</span> — Limited Time!
+  </div>
 
   <a id="top"></a>
 
   <!-- HERO -->
   <section class="relative text-center py-20 px-6 overflow-hidden" style="font-size:130%">
     <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./backpage.png'); opacity:.60"></div>
-    <img src="./release-to-rise.png" alt="Release to Rise Logo" class="mb-6 w-56 h-56 mx-auto drop-shadow">
+    <img src="./release-to-rise.png" alt="Release to Rise Logo" class="mb-6 w-44 h-44 mx-auto drop-shadow">
     <h1 class="text-7xl font-bold text-green-900 mb-4">Release to Rise Healing</h1>
     <p class="text-lg text-gray-800 max-w-2xl mx-auto font-bold">
       A trauma-informed healing practice blending Reiki, intuitive energy work, and talk therapy.
       Helping you release emotional blockages, process trauma, and achieve balance—mentally, emotionally, and spiritually.
     </p>
-    <!-- Primary CTA: Setmore popup -->
-    <button type="button"
-            class="inline-block mt-6 bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-2xl shadow-lg font-bold"
-            data-track="book"
-            onclick="setmoreopen('https://releasetorise.setmore.com'); return false;">
-      Book a Session
-    </button>
+    <!-- Primary CTA: Setmore popup to MAIN booking page -->
+    <a href="https://releasetorise.setmore.com" data-track="book"
+       onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
+       class="inline-block mt-6 bg-green-700 hover:bg-green-800 text-white px-6 py-3 rounded-2xl shadow-lg font-bold">
+      Schedule a Session
+    </a>
   </section>
 
-  <!-- ABOUT US (unchanged content abbreviated) -->
+  <!-- ABOUT (short) -->
   <section id="about" class="relative py-16 px-6 overflow-hidden">
     <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./reiki-swirl.jpg'); opacity:.68"></div>
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-10">About Us</h2>
-      <!-- ... existing about content from your file ... -->
+      <div class="grid md:grid-cols-3 gap-8 items-stretch">
+        <div class="rounded-2xl overflow-hidden shadow-md bg-white/60 border border-stone-100">
+          <img src="./BIO2.jpg" alt="Randy — Reiki Master" class="w-full h-full object-cover object-center">
+        </div>
+        <div class="md:col-span-2 rounded-2xl shadow-md bg-white/80 backdrop-blur-sm p-8 border border-stone-100">
+          <h3 class="text-2xl font-bold text-green-900 mb-3">Randy — Founder &amp; Lead Practitioner</h3>
+          <p class="text-gray-900 mb-4">I’m a <strong>multifaceted energy healer</strong>—a <strong>Certified Reiki Master</strong> specializing in 
+            <strong>sound healing</strong>, <strong>breathwork</strong>, and <strong>trauma-informed coaching</strong>.
+          </p>
+          <ul class="list-disc pl-5 text-gray-900 space-y-2">
+            <li><strong>Certified Reiki Master</strong> (energy balancing &amp; alignment)</li>
+            <li><strong>Certified Sound Healer</strong> (tuning forks, bowls, frequency work)</li>
+            <li><strong>Breathwork practitioner</strong> (somatic regulation support)</li>
+            <li><strong>Trauma-informed coach</strong> (safe, grounded, consent-led)</li>
+          </ul>
+        </div>
+        <div class="md:col-span-3 rounded-2xl shadow-md bg-white/70 backdrop-blur-sm p-8 border border-stone-100">
+          <img src="./LaurenB.jpg" alt="Lauren — Breathwork & Sound Healing" class="w-full h-56 object-cover rounded-xl mb-4">
+          <h3 class="text-2xl font-bold text-green-900 mb-2">Lauren — Breathwork &amp; Sound Healing</h3>
+          <p class="text-gray-900">Lauren is a <strong>Certified Breathwork Facilitator</strong> and <strong>Certified Sound Healer</strong>.</p>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- OFFERINGS (each box opens Setmore popup; swap URLs per-service when you have them) -->
+  <!-- OFFERINGS: all cards open MAIN Setmore booking page in popup -->
   <section id="offerings" class="relative py-16 px-6">
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-10">What We Offer</h2>
       <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
 
-        <!-- Energy Work Reiki -->
         <a href="https://releasetorise.setmore.com" data-track="book"
-           onclick="setmoreopen('https://releasetorise.setmore.com'); return false;"
+           onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
            class="group relative h-64 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
           <img src="./Randy_PR.jpg" alt="Energy Work session" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity group-hover:from-black/90"></div>
@@ -108,9 +116,8 @@
           </div>
         </a>
 
-        <!-- Remote Distance Reiki -->
         <a href="https://releasetorise.setmore.com" data-track="book"
-           onclick="setmoreopen('https://releasetorise.setmore.com'); return false;"
+           onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
            class="group relative h-64 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
           <img src="./distance.jpg" alt="Remote Distance Reiki" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity group-hover:from-black/90"></div>
@@ -121,9 +128,8 @@
           </div>
         </a>
 
-        <!-- In-Home Reiki -->
         <a href="https://releasetorise.setmore.com" data-track="book"
-           onclick="setmoreopen('https://releasetorise.setmore.com'); return false;"
+           onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
            class="group relative h-64 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
           <img src="./WorkingMale.jpg" alt="In-home Reiki session" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity group-hover:from-black/90"></div>
@@ -134,9 +140,8 @@
           </div>
         </a>
 
-        <!-- Group Breathwork -->
         <a href="https://releasetorise.setmore.com" data-track="book"
-           onclick="setmoreopen('https://releasetorise.setmore.com'); return false;"
+           onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
            class="group relative h-64 rounded-2xl overflow-hidden shadow-lg border border-stone-200">
           <img src="./GroupBreath.png" alt="Group breathwork class" class="absolute inset-0 w-full h-full object-cover">
           <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent transition-opacity group-hover:from-black/90"></div>
@@ -151,12 +156,12 @@
     </div>
   </section>
 
-  <!-- TESTIMONIALS (unchanged content abbreviated) -->
+  <!-- TESTIMONIALS (placeholder if you have a carousel) -->
   <section id="testimonials" class="relative py-16 px-6 overflow-hidden">
     <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./purplebottom.jpg'); opacity:.30"></div>
     <div class="max-w-6xl mx-auto">
       <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-8">Client Testimonials</h2>
-      <!-- ... existing testimonials carousel from your file ... -->
+      <!-- Existing carousel markup can be reinserted here -->
     </div>
   </section>
 
@@ -165,103 +170,59 @@
     <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./purplebottom.jpg'); opacity:.30"></div>
     <div class="max-w-6xl mx-auto text-center pb-24 sm:pb-0">
       <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-4">Ready to Begin?</h2>
-      <p class="text-gray-800 max-w-2xl mx-auto mb-6">
-        Whether you have questions or feel called to book, this is your invitation. Together, we’ll open a path of release and realignment that honors your whole self — mind, body, and spirit.
-      </p>
+      <p class="text-gray-800 max-w-2xl mx-auto mb-6">Have questions or want to book your first session? Reach out—let’s create a path that supports your nervous system, your body, and your goals.</p>
       <p class="mt-3 text-base text-green-900 font-semibold bg-green-100 p-2 rounded max-w-2xl mx-auto">
         🌿 <strong>New Client Offer:</strong> 25% off your first session with code <span class="underline">RISE25</span>.
       </p>
-
-      <!-- Primary CTA: Setmore popup -->
-      <div class="mt-8">
-        <button type="button"
-                class="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white text-lg px-8 py-4 rounded-2xl shadow-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
-                data-track="book"
-                onclick="setmoreopen('https://releasetorise.setmore.com'); return false;">
-          Schedule a Session
-        </button>
-      </div>
-
-      <!-- Contact chips -->
-      <div class="mt-6 flex flex-wrap justify-center gap-3">
-        <a href="https://share.google/vkBrS4q4Ccy13ezsY"
-           class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white"
-           aria-label="Call or text via Google listing">
-          📞 Call / Text: 801-980-1522
+      <!-- Contact CTAs -->
+      <div class="mt-8 flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3 sm:gap-4">
+        <!-- MAIN Setmore booking page popup -->
+        <a href="https://releasetorise.setmore.com" data-track="book"
+           onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
+           class="w-full sm:w-auto bg-green-700 hover:bg-green-800 text-white text-lg md:text-base px-6 py-4 rounded-2xl shadow-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2 focus-visible:ring-offset-white"
+           aria-label="Schedule a session via Setmore">
+           Schedule a Session
         </a>
-        <a href="mailto:ReleaseToRiseHealing@gmail.com"
-           class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white"
-           aria-label="Email Release to Rise">
-          ✉️ ReleaseToRiseHealing@gmail.com
+        <a href="mailto:ReleaseToRiseHealing@gmail.com?subject=Session%20Inquiry&body=Hi%20Randy%2C%0A%0AI'd%20like%20to%20book%20a%20session.%20My%20availability%20is..."
+           class="w-full sm:w-auto bg-white border border-stone-300 hover:bg-stone-50 text-green-900 px-6 py-4 rounded-2xl shadow font-semibold">
+           Email Inquiry
         </a>
-        <a href="https://share.google/vkBrS4q4Ccy13ezsY"
-           class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white"
-           aria-label="View Release to Rise on Google">
-          📍 Saratoga Springs, Utah
+        <a href="#top"
+           class="w-full sm:w-auto bg-white border border-stone-300 hover:bg-stone-50 text-green-900 px-6 py-3 rounded-2xl shadow">
+           Back to Top
         </a>
       </div>
-
-      <!-- Removed inline Calendly widget -->
     </div>
 
     <!-- Mobile sticky bar -->
     <div data-sticky-cta class="fixed inset-x-0 bottom-0 z-50 sm:hidden">
       <div class="bg-white/90 backdrop-blur border-t border-stone-200 px-4 py-3">
-        <a href="#" id="mobile-cta"
-           class="w-full inline-flex justify-center items-center bg-green-700 hover:bg-green-800 text-white text-lg px-6 py-3 rounded-xl shadow-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
-           data-track="book">
+        <a href="https://releasetorise.setmore.com" id="mobile-cta" data-track="book"
+           onclick="if (typeof setmoreopen==='function'){ setmoreopen('https://releasetorise.setmore.com'); } else { window.open('https://releasetorise.setmore.com','SetmorePopup','width=760,height=760'); } return false;"
+           class="w-full inline-flex justify-center items-center bg-green-700 hover:bg-green-800 text-white text-lg px-6 py-3 rounded-xl shadow-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600">
            Schedule a Session
         </a>
       </div>
     </div>
   </section>
 
-  <!-- Testimonials carousel JS (kept from your file if needed) -->
+  <!-- Click tracking for Setmore + phone -->
   <script>
-    (function(){
-      const track = document.getElementById('testimonials-track');
-      if (!track) return;
-      const buttons = document.querySelectorAll('[data-arrow]');
-      const cardWidth = () => track.querySelector('blockquote')?.offsetWidth || 320;
-      buttons.forEach(btn => {
-        btn.addEventListener('click', () => {
-          const dir = btn.getAttribute('data-arrow');
-          track.scrollBy({ left: (dir === 'right' ? 1 : -1) * (cardWidth() + 24), behavior: 'smooth' });
-        });
-      });
-      let timer; const start = () => timer = setInterval(() => {
-        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) { track.scrollTo({ left: 0, behavior: 'smooth' }); }
-        else { track.scrollBy({ left: cardWidth() + 24, behavior: 'smooth' }); }
-      }, 6000); const stop = () => clearInterval(timer);
-      track.addEventListener('mouseenter', stop);
-      track.addEventListener('touchstart', stop, { passive: true });
-      track.addEventListener('mouseleave', start);
-      track.addEventListener('touchend', start);
-      start();
-    })();
-  </script>
-
-  <script>
-    // Analytics helpers
     function hasFbq(){ return typeof fbq === 'function'; }
     function hasGtag(){ return typeof gtag === 'function'; }
-
-    // Click tracking for any Setmore booking trigger
     document.addEventListener('click', function(e){
       const a = e.target.closest && e.target.closest('[data-track="book"]');
       if (a){
         if (hasGtag()) gtag('event', 'generate_lead', { method: 'setmore' });
         if (hasFbq()) fbq('track', 'Schedule', { method: 'setmore' });
       }
-      // click-to-call tracking
       const tel = e.target.closest && e.target.closest('a[href^="tel:"]');
       if (tel){
         if (hasGtag()) gtag('event', 'click_to_call', { link_url: tel.getAttribute('href') });
         if (hasFbq()) fbq('track', 'Contact', { method: 'phone' });
       }
     }, { capture: true });
-
-    // Promo banner click
+    // Promo banner click scroll
     (function(){
       const promo = document.getElementById('promo-banner');
       if (!promo) return;
@@ -274,17 +235,7 @@
     })();
   </script>
 
-  <!-- Mobile CTA opens Setmore popup -->
-  <script>
-    window.addEventListener('load', function(){
-      var btn = document.getElementById('mobile-cta');
-      if (btn){
-        btn.addEventListener('click', function(e){ e.preventDefault(); setmoreopen('https://releasetorise.setmore.com'); return false; });
-      }
-    });
-  </script>
-
-  <!-- Setmore Popup Script (include ONCE) -->
+  <!-- Setmore Popup Script (include ONCE; enables setmoreopen(...)) -->
   <script id="setmore_script" type="text/javascript" src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script>
 </body>
 </html>
