@@ -327,7 +327,43 @@
         <a href="mailto:ReleaseToRiseHealing@gmail.com" class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white" aria-label="Email Release to Rise">✉️ ReleaseToRiseHealing@gmail.com</a>
         <a href="https://share.google/vkBrS4q4Ccy13ezsY" class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white" aria-label="View Release to Rise on Google">📍 Saratoga Springs, Utah</a>
       </div>
+<!-- Inline Setmore embed with gentle scaling -->
+<section id="booking" class="py-10 px-6">
+  <h2 class="text-3xl font-semibold text-center text-green-800 mb-6">Book a Session</h2>
 
+  <div class="mx-auto max-w-5xl">
+    <div class="setmore-wrap">
+      <iframe
+        src="https://releasetorise.setmore.com"
+        title="Setmore Booking"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        class="setmore-frame">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<style>
+  /* Scale the entire scheduler to make text larger */
+  .setmore-wrap {
+    transform: scale(1.15);          /* ~15% larger */
+    transform-origin: top center;
+    /* prevent clipping from the scale */
+    width: 100%;
+    overflow: hidden;
+  }
+  .setmore-frame {
+    width: 100%;
+    height: 1300px;                  /* give it extra height so nothing is cut off */
+    border: 0;
+  }
+  /* On small screens, don’t scale to keep it readable/wrappable */
+  @media (max-width: 640px) {
+    .setmore-wrap { transform: none; }
+    .setmore-frame { height: 1400px; }
+  }
+</style>
       <!-- Removed Calendly inline widget -->
     </div>
 
