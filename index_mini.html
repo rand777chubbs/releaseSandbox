@@ -1,0 +1,577 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Release to Rise Healing</title>
+  <meta name="description" content="Trauma-informed healing practice blending Reiki, intuitive energy work, and talk therapy.">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+
+  <!-- Icons & Fonts -->
+  <link rel="icon" type="image/png" href="./favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&family=Cormorant:wght@600;700&display=swap" rel="stylesheet">
+
+  <!-- Performance & Setmore -->
+  <link rel="preconnect" href="https://assets.setmore.com" crossorigin>
+  <link rel="preconnect" href="https://releasetorise.setmore.com">
+  <link rel="preload" as="image" href="./backpage.avif" imagesrcset="./backpage.avif 1x, ./backpage.avif 2x" imagesizes="100vw">
+  <link rel="stylesheet" href="./rtr.tailwind.min.css">
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.releasetorisehealing.com/">
+  <meta property="og:title" content="Release to Rise Healing">
+  <meta property="og:description" content="Reiki, sound healing, and breathwork in Saratoga Springs. New clients: 25% off with code RISE25.">
+  <meta property="og:image" content="https://www.releasetorisehealing.com/og-cover.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Release to Rise Healing">
+  <meta name="twitter:description" content="Reiki, sound healing, and breathwork in Saratoga Springs. New clients: 25% off with code RISE25.">
+  <meta name="twitter:image" content="https://www.releasetorisehealing.com/og-cover.jpg">
+
+  <style>
+    :root{--font-head:'Cormorant',serif;--font-body:'Quicksand',sans-serif}
+    html { font-size: 120%; }
+    body{font-family:var(--font-body)}
+    h1,h2,h3{font-family:var(--font-head)}
+
+    .badge{ display:inline-flex; align-items:center; gap:.4rem; font-size:.8rem; padding:.25rem .6rem; border-radius:999px; border:1px solid rgba(0,0,0,.08); background:rgba(255,255,255,.65); }
+    .badge-accent{ background:#065f46; color:#ecfdf5; border-color:rgba(255,255,255,.3); }
+    .btn{ display:inline-flex; align-items:center; justify-content:center; padding:.6rem 1rem; border-radius:12px; font-weight:700; }
+    .btn-primary{ background:#166534; color:white; }
+    .btn-primary:hover{ background:#14532d; }
+    .btn-outline{ background:white; color:#166534; border:1px solid #a7f3d0; }
+    .btn-outline:hover{ background:#ecfdf5; }
+    details summary { cursor:pointer; list-style:none; }
+    details summary::-webkit-details-marker { display:none; }
+    details[open] .chev { transform:rotate(180deg) }
+
+    /* Mobile-first tightening */
+    @media (max-width: 767px){
+      #hero { padding-top: 2rem; padding-bottom: 2rem; }
+      #hero h1 { font-size: 1.375rem; } /* ~22px */
+      #hero p { line-height: 1.2; font-size: .95rem; }
+      #about .chips li{ margin-bottom:.25rem; }
+      .backdrop-blur-sm{backdrop-filter:none}
+    }
+
+    /* Setmore iframe scale on sm+ */
+    @media (min-width: 640px) {
+      #setmore-iframe { transform: scale(1.12); transform-origin: top center; height: 900px; }
+    }
+  </style>
+
+  <!-- GA4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-6E27FHTPSH"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-6E27FHTPSH');
+  </script>
+
+  <!-- Helper to open Setmore in popup and track -->
+  <script>
+    function openSetmore(u, sourceTag){
+      if (typeof setmoreopen==='function'){ setmoreopen(u); } 
+      else { window.open(u,'SetmorePopup','width=760,height=760'); }
+      if (typeof gtag==='function') gtag('event','generate_lead',{ method:'setmore', source: sourceTag || 'cta' });
+      return false;
+    }
+  </script>
+</head>
+<body class="min-h-screen text-gray-800">
+  <a id="top"></a>
+
+  <!-- Promo banner -->
+  <div id="promo-banner" class="bg-green-900 text-white text-center px-4 py-3 text-lg font-bold shadow-md">
+    🎉 New Clients: <span class="underline">25% OFF</span> your first session with code 
+    <span class="bg-white text-green-900 px-2 py-1 rounded">RISE25</span> — Limited Time!
+  </div>
+
+  <!-- ===== HERO (condensed on mobile) ===== -->
+  <section id="hero" class="relative text-left md:text-center px-4 sm:px-6 overflow-hidden">
+    <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./backpage1.webp'); opacity:.50"></div>
+
+    <div class="mx-auto max-w-3xl">
+      <div class="py-8 md:py-16">
+        <!-- Small inline logo for mobile; larger logo on md+ -->
+        <div class="flex md:justify-center items-center gap-3 mb-2">
+          <img src="./RTRLOGOFinal.png" alt="Release to Rise Healing logo" class="h-8 w-auto md:h-12">
+          <h1 class="font-semibold text-green-800 md:text-4xl">Release to Rise Healing</h1>
+        </div>
+
+        <p class="text-stone-700 leading-snug md:leading-normal md:text-lg max-w-prose">
+          Gentle, grounded energy work to help you feel lighter, calmer, and more aligned.
+        </p>
+
+        <div class="mt-4 flex gap-3 md:justify-center">
+          <a href="https://releasetorise.setmore.com" data-track="book"
+             onclick="return openSetmore('https://releasetorise.setmore.com','hero_button')"
+             class="inline-flex items-center justify-center rounded-xl bg-green-700 px-5 py-2.5 text-white font-medium shadow hover:bg-green-800">
+            Book a Session
+          </a>
+          <a href="#offerings" class="inline-flex items-center justify-center rounded-xl border border-stone-300 px-4 py-2.5 text-stone-700 hover:bg-stone-50">
+            What We Offer
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ABOUT (compact + expandable on mobile) ===== -->
+  <section id="about" class="relative px-4 sm:px-6">
+    <div class="mx-auto max-w-3xl">
+      <div class="rounded-2xl border border-stone-200 p-4 sm:p-6 bg-white/90 shadow-sm">
+        <div class="flex items-center gap-3">
+          <img src="./Randy_PR.jpg" alt="Randy — Founder & Practitioner"
+               class="h-14 w-14 rounded-xl object-cover">
+          <div>
+            <h2 class="text-lg font-semibold text-stone-900">Randy Stuart</h2>
+            <p class="text-sm text-stone-600">Founder & Energy Practitioner</p>
+          </div>
+        </div>
+
+        <p class="mt-3 text-stone-800 text-sm">
+          Certified Reiki Master blending Reiki, sound, and breathwork in a trauma-informed, consent-led way.
+        </p>
+
+        <ul class="chips mt-3 flex flex-wrap gap-2 text-xs text-stone-700">
+          <li class="rounded-full border border-stone-300 px-2.5 py-1">Hands-off by default</li>
+          <li class="rounded-full border border-stone-300 px-2.5 py-1">Private, comfortable setting</li>
+          <li class="rounded-full border border-stone-300 px-2.5 py-1">Brief integration chat</li>
+        </ul>
+
+        <details class="mt-3 group">
+          <summary class="cursor-pointer text-sm text-green-800 font-medium select-none">
+            Read more <span class="ml-1 inline-block transition-transform chev">⌄</span>
+          </summary>
+          <div class="mt-2 text-sm text-stone-800">
+            I’m a holistic energy healer focused on helping you release what’s heavy and restore balance—mentally,
+            emotionally, and spiritually. Sessions are tailored to your comfort and may include gentle sound elements
+            and practical aftercare so the benefits carry into daily life.
+          </div>
+          <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-2 text-sm text-stone-700">
+            <li>• Certified Reiki Master</li>
+            <li>• Certified Sound Healer</li>
+            <li>• Breathwork practitioner</li>
+            <li>• Trauma-informed approach</li>
+          </ul>
+        </details>
+
+        <div class="mt-4">
+          <a href="https://releasetorise.setmore.com" data-track="book"
+             onclick="return openSetmore('https://releasetorise.setmore.com','about_button')"
+             class="inline-flex items-center justify-center rounded-xl bg-green-700 px-5 py-2.5 text-white font-medium shadow hover:bg-green-800">
+            Book with Randy
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== OFFERINGS (unchanged from prod) ===== -->
+  <section id="offerings" class="py-16 px-6">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-10">What We Offer</h2>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <!-- Reiki Energy Work -->
+        <article class="rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white">
+          <div class="relative h-64">
+            <img decoding="async" loading="lazy" src="./Randy_PR.jpg" alt="Reiki Energy Work session" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 flex flex-wrap gap-2 text-white">
+              <span class="badge bg-white/20 border-white/30">60 min</span>
+              <span class="badge bg-white/20 border-white/30">$95</span>
+              <span class="badge bg-white/20 border-white/30">In-person</span>
+              <span class="badge badge-accent">New Customer 25% off $70</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-green-900 mb-2">Reiki Energy Work</h3>
+            <p class="text-gray-900">
+              Release stored tension and emotional weight while rebalancing your system. This session blends Reiki with intuitive energy work to calm the nervous system, restore clarity, and leave you feeling grounded and lighter—on and off the table.
+            </p>
+            <details class="mt-4 border border-stone-200 rounded-xl p-4">
+              <summary class="flex items-center justify-between font-semibold text-green-900">What to expect <span class="chev transition-transform">⌄</span></summary>
+              <ul class="mt-3 list-disc pl-5 text-gray-900 space-y-1">
+                <li>Gentle, consent-led, trauma-informed approach</li>
+                <li>Hands-off by default; tailored to comfort</li>
+                <li>Soothing sound elements as needed</li>
+                <li>Brief integration chat with practical steps</li>
+              </ul>
+            </details>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="https://releasetorise.setmore.com/book?step=time-slot&products=08521497-1a17-419e-9881-fed50c91aba5&type=service" class="btn btn-primary" onclick="return openSetmore('https://releasetorise.setmore.com/book?step=time-slot&products=08521497-1a17-419e-9881-fed50c91aba5&type=service','card_energy_booknow')">Book now</a>
+              <a href="https://releasetorise.setmore.com/services/08521497-1a17-419e-9881-fed50c91aba5" class="btn btn-outline" onclick="return openSetmore('https://releasetorise.setmore.com/services/08521497-1a17-419e-9881-fed50c91aba5','card_energy_details')">Details &amp; booking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Remote Reiki -->
+        <article class="rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white">
+          <div class="relative h-64">
+            <img decoding="async" loading="lazy" src="./distance.jpg" alt="Remote Distance Reiki" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 flex flex-wrap gap-2 text-white">
+              <span class="badge bg-white/20 border-white/30">60 min</span>
+              <span class="badge bg-white/20 border-white/30">$95</span>
+              <span class="badge bg-white/20 border-white/30">Remote</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-green-900 mb-2">Remote Reiki Session</h3>
+            <p class="text-gray-900">
+              A calm, restorative session from the comfort of home. We begin with a quick check-in, then move into focused energy work to soften stress, support better sleep, and reconnect you to a steadier baseline—no travel needed.
+            </p>
+            <details class="mt-4 border border-stone-200 rounded-xl p-4">
+              <summary class="flex items-center justify-between font-semibold text-green-900">What to expect <span class="chev transition-transform">⌄</span></summary>
+              <ul class="mt-3 list-disc pl-5 text-gray-900 space-y-1">
+                <li>Meets via secure video or phone</li>
+                <li>Grounding breath cues to settle</li>
+                <li>Energy balancing and gentle sound</li>
+                <li>Simple aftercare guidance</li>
+              </ul>
+            </details>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="https://releasetorise.setmore.com/book?step=time-slot&products=1497444d-68e2-4187-98e3-b6e00d842a5d&type=service" class="btn btn-primary" onclick="return openSetmore('https://releasetorise.setmore.com/book?step=time-slot&products=1497444d-68e2-4187-98e3-b6e00d842a5d&type=service','card_remote_booknow')">Book now</a>
+              <a href="https://releasetorise.setmore.com/services/1497444d-68e2-4187-98e3-b6e00d842a5d" class="btn btn-outline" onclick="return openSetmore('https://releasetorise.setmore.com/services/1497444d-68e2-4187-98e3-b6e00d842a5d','card_remote_details')">Details &amp; booking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- In-Home Reiki -->
+        <article class="rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white">
+          <div class="relative h-64">
+            <img decoding="async" loading="lazy" src="./WorkingMale.jpg" alt="In-Home Reiki" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 flex flex-wrap gap-2 text-white">
+              <span class="badge bg-white/20 border-white/30">60 min</span>
+              <span class="badge bg-white/20 border-white/30">$180</span>
+              <span class="badge bg-white/20 border-white/30">In-home</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-green-900 mb-2">In-Home Reiki</h3>
+            <p class="text-gray-900">
+              A fully mobile experience in your space. We bring a calm, grounded setup and work with your environment to reduce stress, support recovery, and restore balance—perfect if you prefer privacy, have limited mobility, or want maximal ease.
+            </p>
+            <details class="mt-4 border border-stone-200 rounded-xl p-4">
+              <summary class="flex items-center justify-between font-semibold text-green-900">What to expect <span class="chev transition-transform">⌄</span></summary>
+              <ul class="mt-3 list-disc pl-5 text-gray-900 space-y-1">
+                <li>Local travel included; confirm radius</li>
+                <li>Quiet, comfortable area recommended</li>
+                <li>Hands-off by default; tailored to comfort</li>
+                <li>Aftercare suggestions to integrate</li>
+              </ul>
+            </details>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="https://releasetorise.setmore.com/book?step=time-slot&products=de70dc1c-b19f-45a0-a30f-a86bd2ca4a18&type=service" class="btn btn-primary" onclick="return openSetmore('https://releasetorise.setmore.com/book?step=time-slot&products=de70dc1c-b19f-45a0-a30f-a86bd2ca4a18&type=service','card_inhome_booknow')">Book now</a>
+              <a href="https://releasetorise.setmore.com/services/de70dc1c-b19f-45a0-a30f-a86bd2ca4a18" class="btn btn-outline" onclick="return openSetmore('https://releasetorise.setmore.com/services/de70dc1c-b19f-45a0-a30f-a86bd2ca4a18','card_inhome_details')">Details &amp; booking</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Group Breathwork -->
+        <article class="rounded-2xl overflow-hidden shadow-lg border border-stone-200 bg-white">
+          <div class="relative h-64">
+            <img decoding="async" loading="lazy" src="./GroupBreath.png" alt="Group Breathwork" class="absolute inset-0 w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
+            <div class="absolute bottom-3 left-3 flex flex-wrap gap-2 text-white">
+              <span class="badge bg-white/20 border-white/30">75–90 min</span>
+              <span class="badge bg-white/20 border-white/30">By quote</span>
+              <span class="badge bg-white/20 border-white/30">Studio or on-site</span>
+            </div>
+          </div>
+          <div class="p-6">
+            <h3 class="text-2xl font-bold text-green-900 mb-2">Group Breathwork</h3>
+            <p class="text-gray-900">Guided, gentle breath patterns to settle the nervous system, bypass mental noise, and reach deeper emotional layers. Expect a grounded pace, clear cues, and a restorative reset—ideal for releasing stress together and leaving with simple tools you can reuse.</p>
+            <details class="mt-4 border border-stone-200 rounded-xl p-4">
+              <summary class="flex items-center justify-between font-semibold text-green-900">What to expect <span class="chev transition-transform">⌄</span></summary>
+              <ul class="mt-3 list-disc pl-5 text-gray-900 space-y-1">
+                <li>Regulated, gentle patterns (no hyperventilation)</li>
+                <li>Grounded pace with clear cues</li>
+                <li>Optional sound healing elements</li>
+                <li>Integration tips for after class</li>
+              </ul>
+            </details>
+            <div class="mt-5 flex flex-wrap gap-3">
+              <a href="https://releasetorise.setmore.com/classes/53a990d8-7ac6-4a16-98f2-7c9ab625e27f" class="btn btn-primary" onclick="return openSetmore('https://releasetorise.setmore.com/classes/53a990d8-7ac6-4a16-98f2-7c9ab625e27f','card_breath_classes')">See scheduled classes</a>
+              <a href="mailto:ReleaseToRiseHealing@gmail.com?subject=Group%20Breathwork%20—%20Host%20a%20Group%20(min%206)&body=Hi%20there%2C%0D%0A%0D%0AWe%E2%80%99d%20like%20to%20host%20a%20Group%20Breathwork%20session%20(min%206%20people).%0D%0AOur%20preferred%20dates%2Ftimes%20are%3A%20%5Blist%5D%0D%0ALocation%3A%20%5Byour%20location%5D%0D%0APhone%3A%20%5Bbest%20contact%5D%0D%0A%0D%0AThanks!" class="btn btn-outline">Host a group (min 6)</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TESTIMONIALS (unchanged) ===== -->
+  <section id="testimonials" class="relative py-16 px-6 overflow-hidden">
+    <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./purplebottom.webp'); opacity:.30"></div>
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-8">Client Testimonials</h2>
+
+      <div class="relative">
+        <button aria-label="Scroll left" class="absolute left-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow rounded-full w-10 h-10 grid place-items-center" data-arrow="left">&#10094;</button>
+        <button aria-label="Scroll right" class="absolute right-0 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white shadow rounded-full w-10 h-10 grid place-items-center" data-arrow="right">&#10095;</button>
+
+        <div id="testimonials-track" class="flex gap-6 overflow-x-auto snap-x snap-mandatory scroll-smooth pb-2 px-2 [scrollbar-width:none] [-ms-overflow-style:none]" style="scrollbar-width:none">
+          <style>#testimonials-track::-webkit-scrollbar { display: none; }</style>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">"I felt grounded and lighter after one session. The calm stayed with me all week."</p>
+            <footer class="mt-4 text-sm text-gray-700">— Emma</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">"Physically, I feel better. But emotionally, I’m transformed. It’s like pieces of me I lost have come back.Randy is not just a healer—he’s a guide. His energy is peaceful, wise, and deeply healing"</p>
+            <footer class="mt-4 text-sm text-gray-700">— Angie</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">"The integration conversation helped me make real changes at home and work."</p>
+            <footer class="mt-4 text-sm text-gray-700">— Susan</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">"The physical pain I’d been dealing with for years finally began to ease. I walked out feeling lighter in my body and more hopeful."</p>
+            <footer class="mt-4 text-sm text-gray-700">— Ava</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">"I accomplished more healing with Randy in a few sessions than in ten years of traditional talk therapy."</p>
+            <footer class="mt-4 text-sm text-gray-700">— Tiffany</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">"I feel like a new person… his work is nothing short of miraculous."</p>
+            <footer class="mt-4 text-sm text-gray-700">— Mia</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">I came to my first session feeling emotionally exhausted and physically drained… That night, I slept like a baby for the first time in months. Over the following weeks, I felt lighter, more grounded, and more in tune with myself. Transformative.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Charlotte</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">Chronic neck and shoulder pain started to ease—what surprised me most was the emotional release. Randy and Lauren created a supportive environment where I finally felt safe enough to let go.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Amelia</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">Before Reiki I felt numb. In one session, a deep emotional release unlocked something years of therapy hadn’t. Lauren helped me ground, and I’m more at peace with my past.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Harper</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">Randy’s energy is subtle but powerful. I felt more connected to my intuition and had moments of clarity that led to important life decisions. This is soul work.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Adam</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">I’d felt “stuck” for years. After Reiki with Randy, layers of tension melted away and I found clarity and peace I hadn’t felt in years. It gave me hope again.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Abi</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">I’ve struggled with anxiety and panic. After sessions, a calmness washed over me that carried into daily life. Lauren’s follow-up made me feel truly supported.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Emily</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">Burnout had me on edge. After a session I responded to stress differently—calmer, more centered, less reactive. Reiki with Randy is now an anchor in my week.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Rob</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">After a family loss, Reiki became a space where I could process grief without words. Randy’s steady presence and Lauren’s care made me feel held.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Sofia</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">Chronic back pain eased, and I released emotional weight tied to it. I left feeling lighter physically and emotionally than I have in years.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Madison</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">From the first session I felt warmth and clarity—as if something inside opened. Lauren’s compassion made it easy to surrender into healing.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Ella</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">After years of traditional therapy, Reiki unlocked emotions and insights I didn’t know I had buried. Life-changing.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Avery</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">During pregnancy, Reiki helped me reconnect with my body and baby. The sessions became a sacred ritual and brought a more peaceful birth.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Kaitlyn</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">After a traumatic car accident, Reiki helped me release fear and trauma my body had been holding. I felt safe enough to process emotions I’d been avoiding.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Grace</footer>
+          </blockquote>
+
+          <blockquote class="min-w-[280px] max-w-sm snap-start rounded-2xl p-6 bg-white/25 backdrop-blur-sm shadow border border-stone-100">
+            <p class="italic text-gray-900">I came in skeptical. By the end I felt lighter, clearer, and more open. I never imagined Reiki could have this much impact—now I can’t imagine going without it.</p>
+            <footer class="mt-4 text-sm text-gray-700">— Jen</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT (unchanged) ===== -->
+  <section id="contact" class="relative py-16 px-6 overflow-hidden">
+    <div aria-hidden class="absolute inset-0 -z-10 bg-center bg-cover" style="background-image:url('./purplebottom.webp'); opacity:.30"></div>
+    <div class="max-w-6xl mx-auto text-center pb-24 sm:pb-0">
+      <h2 class="text-4xl md:text-5xl font-semibold text-center text-green-800 mb-4">Schedule Your Session</h2>
+      <p class="text-gray-800 max-w-2xl mx-auto mb-6">
+        Prefer a quick view? Use the embedded scheduler below. For the cleanest experience (and to open in a popup), use the service buttons above.
+      </p>
+
+      <p class="mt-3 text-base text-green-900 font-semibold bg-green-100 p-2 rounded max-w-2xl mx-auto">
+        🌿 <strong>New Client Offer:</strong> 25% off your first session with code <span class="underline">RISE25</span> at checkout. One use per person. Not combinable.
+      </p>
+
+      <div class="mt-8">
+        <a href="https://releasetorise.setmore.com" data-track="book"
+           onclick="return openSetmore('https://releasetorise.setmore.com','cta_button')"
+           class="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white text-lg px-8 py-4 rounded-2xl shadow-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600 focus-visible:ring-offset-2"
+           aria-label="Schedule a session via Setmore">
+          Schedule a Session
+        </a>
+      </div>
+
+      <div class="mt-6 flex flex-wrap justify-center gap-3">
+        <a href="tel:8019801522"
+           class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white"
+           aria-label="Call or text now">
+          📞 Call / Text: 801-980-1522
+        </a>
+        <a href="mailto:ReleaseToRiseHealing@gmail.com"
+           class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white"
+           aria-label="Email Release to Rise">
+          ✉️ ReleaseToRiseHealing@gmail.com
+        </a>
+        <a href="https://share.google/vkBrS4q4Ccy13ezsY"
+           class="inline-flex items-center gap-2 bg-white/80 backdrop-blur-sm border border-stone-200 text-green-900 px-4 py-2 rounded-full shadow-sm hover:bg-white"
+           aria-label="View Release to Rise on Google">
+          📍 Saratoga Springs, Utah
+        </a>
+      </div>
+
+      <div class="mt-10">
+        <div id="setmore-shell" class="mt-10">
+          <button id="load-setmore"
+            class="inline-flex items-center justify-center bg-green-700 hover:bg-green-800 text-white text-lg px-8 py-4 rounded-2xl shadow-lg font-bold">
+            Open Scheduler
+          </button>
+        </div>
+        <script>
+        document.getElementById('load-setmore').addEventListener('click', () => {
+          const shell = document.getElementById('setmore-shell');
+          shell.innerHTML = '<iframe id="setmore-iframe" src="https://releasetorise.setmore.com" width="100%" height="800" frameborder="0" allow="clipboard-write" loading="lazy"></iframe>';
+        });
+        </script>
+
+        <p class="mt-4 text-sm opacity-80">If the scheduler does not load, <a class="underline" href="https://releasetorise.setmore.com" target="_blank" rel="noopener">open the booking page</a>.</p>
+      </div>
+    </div>
+
+    <!-- Sticky mobile CTA -->
+    <div data-sticky-cta class="fixed inset-x-0 bottom-0 z-50 sm:hidden">
+      <div class="bg-white/90 backdrop-blur border-t border-stone-200 px-4 py-3">
+        <a href="https://releasetorise.setmore.com" id="mobile-cta" data-track="book"
+           onclick="return openSetmore('https://releasetorise.setmore.com','mobile_cta')"
+           class="w-full inline-flex justify-center items-center bg-green-700 hover:bg-green-800 text-white text-lg px-6 py-3 rounded-xl shadow-lg font-bold focus:outline-none focus-visible:ring-2 focus-visible:ring-green-600"
+           aria-label="Schedule a Session">
+           Schedule a Session
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials carousel JS -->
+  <script>
+    (function(){
+      const track = document.getElementById('testimonials-track');
+      if (!track) return;
+      const buttons = document.querySelectorAll('[data-arrow]');
+      const cardWidth = () => track.querySelector('blockquote')?.offsetWidth || 320;
+
+      buttons.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const dir = btn.getAttribute('data-arrow');
+          track.scrollBy({ left: (dir === 'right' ? 1 : -1) * (cardWidth() + 24), behavior: 'smooth' });
+        });
+      });
+
+      let timer;
+      const start = () => timer = setInterval(() => {
+        if (track.scrollLeft + track.clientWidth >= track.scrollWidth - 5) {
+          track.scrollTo({ left: 0, behavior: 'smooth' });
+        } else {
+          track.scrollBy({ left: cardWidth() + 24, behavior: 'smooth' });
+        }
+      }, 6000);
+      const stop = () => clearInterval(timer);
+
+      track.addEventListener('mouseenter', stop);
+      track.addEventListener('touchstart', stop, { passive: true });
+      track.addEventListener('mouseleave', start);
+      track.addEventListener('touchend', start);
+
+      start();
+    })();
+  </script>
+
+  <!-- Click tracking -->
+  <script>
+    function hasFbq(){ return typeof fbq === 'function'; }
+    function hasGtag(){ return typeof gtag === 'function'; }
+    document.addEventListener('click', function(e){
+      const a = e.target.closest && e.target.closest('[data-track="book"]');
+      if (a){
+        if (hasGtag()) gtag('event', 'generate_lead', { method: 'setmore' });
+        if (hasFbq()) fbq('track', 'Schedule', { method: 'setmore' });
+      }
+      const tel = e.target.closest && e.target.closest('a[href^="tel:"]');
+      if (tel){
+        if (hasGtag()) gtag('event', 'click_to_call', { link_url: tel.getAttribute('href') });
+        if (hasFbq()) fbq('track', 'Contact', { method: 'phone' });
+      }
+    }, { capture: true });
+    (function(){
+      const promo = document.getElementById('promo-banner');
+      if (!promo) return;
+      promo.addEventListener('click', function(){
+        if (hasGtag()) gtag('event', 'promo_click', { code: 'RISE25' });
+        if (hasFbq()) fbq('trackCustom', 'PromoClick', { code: 'RISE25' });
+        const target = document.getElementById('contact');
+        if (target) target.scrollIntoView({ behavior: 'smooth' });
+      });
+    })();
+  </script>
+
+  <!-- GA4 booked conversion via Thank-You redirect (Option A) -->
+  <script>
+    (function () {
+      try {
+        var isThankYou = window.location.pathname.toLowerCase().indexOf('thank-you') !== -1;
+        if (isThankYou && typeof gtag === 'function') {
+          gtag('event', 'generate_lead', { method: 'setmore', source: 'thank_you' });
+        }
+      } catch (e) { /* no-op */ }
+    })();
+  </script>
+
+  <!-- Setmore Popup Script -->
+  <script id="setmore_script" type="text/javascript" src="https://assets.setmore.com/integration/static/setmoreIframeLive.js"></script>
+
+  <!-- Fallback Tailwind CDN (safe to remove when CSS file covers all utilities) -->
+  <script src="https://cdn.tailwindcss.com" defer></script>
+</body>
+</html>
